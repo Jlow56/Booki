@@ -16,8 +16,8 @@
                 <img src="./images/logo/Booki.png" alt="Logo de Booki">
                 <nav>     
                     <ul>
-                        <li><a href="#">Hébergements</a></li>
-                        <li><a href="#">Activités</a></li>
+                        <li><a href="#hebergements-anchor">Hébergements</a></li>
+                        <li><a href="#activity-anchor">Activités</a></li>
                     </ul>
                 </nav>  
             </header>
@@ -26,10 +26,18 @@
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre ville ou en pleine nature</p>
                     <form class="search-bar" name="search-bar" id="search-bar" role="search" aria-label="Rechercher" aria-describedby="search" aria-labelledby="search" aria-owns="search" aria-controls="search" action="#" method="get">
-                        <label for="search"><i class="fa-solid fa-location-dot"></i></label>
+                        <label for="search">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </label>
                         <input type="search" name="search" id="search" placeholder="Marseille, France">
-                        <button type="submit">Rechercher</button>
-                        <button type="submit" class="responsive-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button type="submit" class="desktop-search">Rechercher</button>
+                        <button type="submit" class="responsive-search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path d="M16.7688 14.6976L13.4582 11.3876C13.3088 11.2382 13.1062 11.1552 12.8937 11.1552H12.3525C13.2689 9.9832 13.8135 8.50913 13.8135 6.90558C13.8135 3.09091 10.7221 0 6.90676 0C3.09144 0 0 3.09091 0 6.90558C0 10.7202 3.09144 13.8112 6.90676 
+                                    13.8112C8.51058 13.8112 9.98491 13.2667 11.1571 12.3504V12.8915C11.1571 13.104 11.2401 13.3065 11.3895 13.4559L14.7001 16.7659C15.0122 17.078 15.517 17.078 15.8258 16.7659L16.7655 15.8264C17.0776 15.5143 17.0776 15.0097 16.7688 14.6976ZM6.90676 
+                                    11.1552C4.55912 11.1552 2.65644 9.25613 2.65644 6.90558C2.65644 4.55834 4.5558 2.65599 6.90676 2.65599C9.25439 2.65599 11.1571 4.55502 11.1571 6.90558C11.1571 9.25281 9.25771 11.1552 6.90676 11.1552Z" fill="white"/>
+                            </svg>
+                        </button>
                     </form>
                     <div class="filters">
                         <h3>Filtres</h3>
@@ -60,7 +68,7 @@
                         <p>Plus de 500 logements sont disponibles dans cette ville</p>
                     </div>
                 </div>    
-                <div class="hebergements-and-populaires">
+                <div id="hebergements-anchor" class="hebergements-and-populaires">
                     <section class="hebergements">
                         <h2 class="section-title">Hébergements à Marseille</h2>
                         <div class="hebergements-cards">
@@ -245,31 +253,56 @@
                         </div>
                     </section>
                 </div>
-                <div class="activity">
+                <section id="activity-anchor" class="activity">
                     <h2>Activités à Marseille</h2>
-                    <section class="activity-cards">
-                        <article class="activity-card">
-                            <img src="./images/activites/reno-laithienne.jpg" alt="port du Vieux-Port de Marseille">
-                            <h3>Vieux-Port</h3>
-                        </article>
-                        <article class="activity-card">
-                            <img src="./images/activites/paul-hermann.jpg" alt="photo du fort de Pomègues">
-                            <h3>Fort de Pomègues</h3>
-                        </article>
-                        <article class="activity-card">
-                            <img src="./images/activites/kilyan-sockalingum.jpg" alt="Image du parc national des Calanques">
-                            <h3>Parc national des Calanques</h3>
-                        </article>
-                        <article class="activity-card">
-                            <img src="./images/activites/florian-wehde.jpg" alt="photo de la cathédrale Notre-Dame-de-la-Garde">
-                            <h3>Notre-Dame-de-la-Garde</h3>
-                        </article>    
-                    </section>
-                </div>
+                    <div class="activity-cards">
+                        <a href="#" class="activity-card">
+                            <article>
+                                <div class="activity-card-img">
+                                    <img src="./images/activites/reno-laithienne.jpg" alt="port du Vieux-Port de Marseille">
+                                </div>
+                                <div class="activity-card-title">
+                                    <h3>Vieux-Port</h3>
+                                </div>
+                            </article>
+                        </a>
+                        <a href="#" class="activity-card">
+                            <article>
+                                <div class="activity-card-img">
+                                    <img src="./images/activites/paul-hermann.jpg" alt="photo du fort de Pomègues">
+                                </div>
+                                <div class="activity-card-title">
+                                    <h3>Fort de Pomègues</h3>
+                                </div>
+                            </article> 
+                        </a>
+                        <a href="#" class="activity-card">
+                            <article>
+                                <div class="activity-card-img">
+                                    <img src="./images/activites/kilyan-sockalingum.jpg" alt="Image du parc national des Calanques">
+                                </div>
+                                <div class="activity-card-title">
+                                    <h3>Parc national des Calanques</h3>
+                                </div>      
+                            </article>
+                        </a>
+                        <a href="#" class="activity-card">
+                            <article>
+                                <div class="activity-card-img">
+                                    <img src="./images/activites/florian-wehde.jpg" alt="photo de la cathédrale Notre-Dame-de-la-Garde">
+                                </div>
+                                <div class="activity-card-title">
+                                    <h3>Notre-Dame-de-la-Garde</h3>
+                                </div>
+                               
+                            </article>
+                        </a>    
+                    </div>
+                </section>
             </main>
-            <footer>
+            <footer> 
                 <section class="footer-container">
-                    <h3>A propos</h3>
+                    <h4>A propos</h4>
                     <ul class="footer-list">
                         <li><a href="#">Fonctionnement du site</a></li>
                         <li><a href="#">Conditions g&eacute;n&eacute;rales</a></li>
@@ -277,14 +310,14 @@
                     </ul>
                 </section>
                 <section class="footer-container">
-                    <h3>Nos hébergements</h3>
+                    <h4>Nos hébergements</h4>
                     <ul class="footer-list">
                         <li><a href="#">Charte qualité</a></li>
                         <li><a href="#">Proposer votre hotel</a></li>
                     </ul>
                 </section>
                 <section class="footer-container">
-                    <h3>Assistance</h3>
+                    <h4>Assistance</h4>
                     <ul class="footer-list">
                         <li><a href="#">Centre d'aide</a></li>
                         <li><a href="#">Nous contacter</a></li>
