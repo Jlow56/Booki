@@ -83,7 +83,7 @@ h1,h2 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0;
+    
 }
 
 h3 {
@@ -108,7 +108,7 @@ a {
 /****** Cards ***********/
 
 .section-title {
-    margin: 0;
+    
     font-size: 22px;
 }
 
@@ -128,11 +128,11 @@ a {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0;
+    
 }
 
 .card-subtitle {
-    margin: 0;
+    
     font-size: 14px;
 }
 
@@ -304,12 +304,17 @@ form.search-bar button:hover {
     align-items: center;
     display: flex;
     height: 50px;
-    padding: 0px 19px;
+    padding: 4px 19px;
     gap: 10px;
     border-radius: 30px;
     border: 2px solid #D9D9D9;
     box-sizing: border-box;
-    }
+    height: 50px; 
+}
+
+.n0 {
+    font-size: 18px;
+}
 
 .filter:hover {
     background-color:#DEEBFF;
@@ -405,13 +410,13 @@ div.hebergements-cards {
 
 .hebergements-card-content {
     display: flex;
-        padding: 0px 15px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        align-self: stretch;
-        box-sizing: border-box; 
-    }
+    padding: 0px 15px 15px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    box-sizing: border-box; 
+}
 
 
 
@@ -422,7 +427,7 @@ a.show-more {
 }
 
 a.show-more h4 {
-    margin: 0;
+    
 }
 /****** Populaires ***********/
 .populaires {
@@ -462,7 +467,7 @@ a.show-more h4 {
 }
 
 .populaires-cards .card-subtitle {
-    margin: 0;
+    
 }
 
 .populaires-cards .card-rating {
@@ -479,10 +484,6 @@ a.show-more h4 {
 }
 
 div.activity-cards {
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 30px; */
-
     display: flex;
     align-items: flex-start;
     gap: 30px;
@@ -504,7 +505,7 @@ a.activity-card article {
     width: 100%;
 }
 
-div.activity-card-img {
+.activity-card-img {
     height: 80%;
 } 
 
@@ -528,7 +529,7 @@ div.activity-card-img {
 
 .activity-card h3 {
     padding: 20px 19px;
-    margin: 0;
+    
 }
 
 /******* Footer ***********/
@@ -540,12 +541,15 @@ div.activity-card-img {
 
    .footer-containers {
         display: flex;
-        padding: 20px;
         gap: 15px;
     }
     
    .footer-container {
-        flex: 1;
+        display: flex;
+        flex-direction: column;    
+        flex: 1 0 0;
+        padding: 20px;
+        gap: 15px;
     }
 
    .footer-container h4 {
@@ -562,7 +566,7 @@ div.activity-card-img {
 /********* Media queries ***********/
 
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1440px) 
+@media (min-width: 1440px) 
 {
     body {
         max-width: 1440px;
@@ -603,6 +607,26 @@ div.activity-card-img {
 
     .populaires-cards a {
         width: 30%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /** Activity **/
+    .activity-card {
+        height: auto !important;
+    }
+
+    .activity-card img {
+        height: 200px;
+    }
+    
+    .activity-card-title {
+        height: 70px;
+    }
+
+    /** Footer **/
+    .footer-containers {
+        gap: 30px;
     }
 }
 /* Small devices (phones, less than 768px min 320) */
@@ -697,6 +721,7 @@ div.activity-card-img {
     .filter-bar {
         display: grid;
         justify-content: center;
+        align-items: end;
         height: auto;
         width: 100%;
         grid-template-rows: repeat(2, 1fr);
@@ -736,7 +761,9 @@ div.activity-card-img {
         justify-items: center;
         align-items: center;
         box-sizing: border-box;
-        width: 100%;            
+        width: 100%;
+        padding: 0;           
+        /* padding: 4px 19px; */
     }
 
     .filter p {
@@ -755,7 +782,7 @@ div.activity-card-img {
         flex-direction: column;
         justify-content: center;
         gap: 15px;
-        padding: 20px;
+        padding: 30px 20px;
     }
 
     /** Hebergements **/
@@ -783,6 +810,7 @@ div.activity-card-img {
     .hebergement-article {
         display: flex;
         flex-direction: column;
+        padding-bottom: 0;
         gap: 4px;
     }
     
@@ -794,13 +822,22 @@ div.activity-card-img {
 
     .populaires-cards .card {
         margin-top: 15px;
+        margin-top: 0;
     }
 
     .populaires-cards a {
         width: 100%;
         height: auto;
     }
-    
+
+    .populaires-cards img {
+        height: 146px;
+    }
+
+    .populaires-cards .card-content {
+        padding: 10px 5px 5px 15px;
+        gap: 24px;
+    }
     /** Activites **/
     .activity {
         display: flex;
@@ -825,16 +862,25 @@ div.activity-card-img {
         height: auto;
     }
 
-    div.activity-card-img {
-        height: 141px;
+    .activity-card-img {
+        height: 141px !important;
+    }
+
+    .card-txt {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        flex: 1 0 0;
     }
 
     /******* Footer ***********/
     .footer-containers {
         flex-direction: column;
         align-items: flex-start;
-        gap: 50px
-
+        gap: 50px; 
+        padding: 30px;
     }
 
     .footer-container {
