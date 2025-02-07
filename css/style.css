@@ -571,11 +571,11 @@ a.activity-card article {
     }
 }
 
-@media (min-width:1440px) {
+/* @media (min-width:1440px) {
     .main-container {
         padding: 0 230px;
     }
-}
+} */
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (min-width: 768px) and (max-width: 1023px) {
